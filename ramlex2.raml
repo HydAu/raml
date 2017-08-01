@@ -1,0 +1,23 @@
+#%RAML 1.0
+---
+title: Users API
+baseUri: http://hyd.com.au/{version}
+version: v1
+/users:
+  /{userId}:
+    get:
+      description: Retrieve a user details
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "data": {
+                    "id": "1",
+                    "displayName": "Dave Smith",
+                    "description": null,
+                  },
+                  "success": true,
+                  "status": 200
+                }
